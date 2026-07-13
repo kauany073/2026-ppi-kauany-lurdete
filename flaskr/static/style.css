@@ -1,0 +1,54 @@
+html {
+    font-family: sans-serif;
+    background: #eee;
+    padding: 1rem;
+}
+
+body {
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+}
+
+h1 {
+    font-family: serif;
+    color: #9bebff;
+    margin: 1rem 0;
+}
+
+a {
+    color: #377ba8;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid lightgray;
+}
+
+nav {
+    background: #13116b;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+nav h1 {
+    flex: auto;
+    margin: 0;
+}
+
+nav h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+.content {
+    padding: 0 1rem 1rem;
+}
+
+.flash {
+    margin: 1em 0;
+    padding: 1em;
+    background: #cae6f6;
+    border: 1px solid #0f0d66;
+}
