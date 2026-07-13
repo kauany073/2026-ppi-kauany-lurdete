@@ -22,11 +22,10 @@ def create_app(test_config=None):
     except OSError:
         pass
     
+    from . import blog
+    app.register_blueprint(blog.bp)
+
     from . import auth
     app.register_blueprint(auth.bp)
-
-    @app.route("/")
-    def index():
-        return render_template("index.html")
 
     return app
