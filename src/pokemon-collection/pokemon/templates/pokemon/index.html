@@ -1,0 +1,38 @@
+<!doctype html>
+<title>Pokémon Collection</title>
+
+<h1>Minha Coleção Pokémon</h1>
+
+<a href="{{ url_for('pokemon.create') }}">Novo Pokémon</a>
+
+<hr>
+
+{% for pokemon in pokemons %}
+  <div>
+    <h2>{{ pokemon['name'] }}</h2>
+
+    <p><strong>Tipo do Pokemon:</strong> {{ pokemon['type'] }}</p>
+
+    <p><strong>Nível do Pokemon:</strong> {{ pokemon['level'] }}</p>
+
+    <p><strong>Poder do Pokemon:</strong> {{ pokemon['power'] }}</p>
+
+    <a href="{{ url_for('pokemon.update', id=pokemon['id']) }}">
+        Editar
+    </a>
+
+    <form action="{{ url_for('pokemon.delete', id=pokemon['id']) }}"
+          method="post"
+          style="display:inline;">
+
+        <button type="submit"
+                onclick="return confirm('Deseja realmente excluir este Pokémon?')">
+            Excluir
+        </button>
+
+    </form>
+  </div>
+
+  <hr>
+
+{% endfor %}

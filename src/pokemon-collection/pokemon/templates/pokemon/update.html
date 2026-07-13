@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html>
+<head>
+    <title>Editar Pokémon</title>
+</head>
+
+<body>
+
+<h1>Editar Pokémon</h1>
+
+<form method="POST">
+
+    <p>
+        <label>Nome do Pokemon:</label><br>
+        <input type="text" name="name" value="{{ pokemon['name'] }}">
+    </p>
+
+    <p>
+        <label>Tipo do Pokemon:</label><br>
+        <input type="text" name="type" value="{{ pokemon['type'] }}">
+    </p>
+
+    <p>
+        <label>Nível do Pokemon:</label><br>
+        <input type="number" name="level" value="{{ pokemon['level'] }}">
+    </p>
+
+    <p>
+        <label>Poder do Pokemon:</label><br>
+        <input type="text" name="power" value="{{ pokemon['power'] }}">
+    </p>
+
+    <button type="submit">Salvar Alterações</button>
+
+</form>
+
+<p>
+    <a href="/">Voltar</a>
+</p>
+
+</body>
+</html>
